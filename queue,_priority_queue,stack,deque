@@ -1,0 +1,70 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+#include<cmath>
+#include<iomanip>
+#include<cstdlib>
+#include<conio.h>
+#include<stdlib.h>
+#include<queue>
+#include<deque>
+#include<stack>
+using namespace std;
+void print_queue(queue<int>qe)
+{
+	while (!qe.empty())
+	{
+		cout << qe.front() << " ";
+		qe.pop();
+	}
+	cout << "\n";
+}
+void print_priority_queue(priority_queue<int>qe)
+{
+	while (!qe.empty())
+	{
+		cout << qe.top() << " ";
+		qe.pop();
+	}
+	cout << "\n";
+}
+void print_stack(stack<int>qe)
+{
+	while (!qe.empty())
+	{
+		cout << qe.top() << " ";
+		qe.pop();
+	}
+	cout << "\n";
+}
+void print_deque(deque<int>qe)
+{
+	while (!qe.empty())
+	{
+		cout << qe.front() << " ";
+		qe.pop_front();
+	}
+	cout << "\n";
+}
+int main()
+{
+	priority_queue<int>pq;
+	queue<int>qe;
+	stack<int>st;
+	deque<int>de;
+	int N; cin >> N;
+	int X;
+	for (int i = 0; i < N; i++)
+	{
+		cin >> X;
+		pq.push(X);
+		qe.push(X);
+		st.push(X);
+		de.push_back(X);
+	}
+	print_queue(qe);
+	print_priority_queue(pq);
+	print_stack(st);
+	print_deque(de);
+	return 0;
+}
