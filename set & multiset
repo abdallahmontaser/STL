@@ -1,0 +1,61 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+#include<cmath>
+#include<iomanip>
+#include<cstdlib>
+#include<conio.h>
+#include<stdlib.h>
+#include<queue>
+#include<deque>
+#include<stack>
+#include<vector>
+#include<set>
+using namespace std;
+#define ll long long
+void print(set<string>& ve)
+{
+	for (auto X : ve)
+		cout << X << " ";
+	cout << "\n";
+}
+void print2(multiset<string>& ve2)
+{
+	for (auto Y : ve2)
+		cout << Y << " ";
+	cout << "\n";
+}
+int main()
+{
+	////////////////////////// set
+	set<string>ve;                   //sorted & unique
+	ve.insert("abdallah");
+	ve.insert("Montaser");
+	ve.insert("Hassan");
+	ve.insert("Hassan");
+	ve.insert("Ahmed");
+	print(ve);
+	set<string>::iterator it = ve.find("Ahmed");        // auto it = ve.find("Ahmed");
+	if (it == ve.end())
+		cout << "Not Found\n";
+	else
+		cout << "Found\n";
+	ve.erase(it);
+	print(ve);
+	////////////////////////// multi set
+	cout << "************************************\n";
+	multiset<string>ve2;                   //sorted & can repeat
+	ve2.insert("Hussin");
+	ve2.insert("Mahmoud");
+	ve2.insert("Mohamed");
+	ve2.insert("Mohamed");
+	ve2.insert("Amir");
+	print2(ve2);
+	multiset<string>::iterator itt = ve2.find("Mohamed");        // auto it = ve.find("Ahmed");
+	if (itt == ve2.end())
+		cout << "Not Found\n";
+	else
+		cout << "Found\n";
+	ve2.erase(itt);
+	print2(ve2);
+}
