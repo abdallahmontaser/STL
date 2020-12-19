@@ -1,0 +1,32 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+#include<cmath>
+#include<iomanip>
+#include<cstdlib>
+#include<conio.h>
+#include<stdlib.h>
+#include<queue>
+#include<deque>
+#include<stack>
+#include<vector>
+#include<set>
+#include<map>
+using namespace std;
+#define ll long long
+void print(map<string, int>& mp)
+{
+	for (pair<string, int> X : mp)
+		cout << X.first << "-" << X.second << "\n";
+}
+int main()
+{
+	map<string, int>mp;
+	mp["A"] = 10;
+	mp["B"] = 11;
+	mp["C"] = 12;
+	mp["D"] = 13;
+	mp["E"] = 14;
+	mp["F"] = 15;
+	print(mp);
+}
