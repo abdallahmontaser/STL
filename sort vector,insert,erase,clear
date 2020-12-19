@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+#include<cmath>
+#include<iomanip>
+#include<cstdlib>
+#include<conio.h>
+#include<stdlib.h>
+#include<queue>
+#include<deque>
+#include<stack>
+#include<vector>
+using namespace std;
+#define ll long long
+void print(vector<int>& ve)
+{
+	for (auto X : ve)
+	{
+		cout << X << " ";
+	}
+	cout << "\n";
+}
+int main()
+{
+	vector<int>ve(5);
+	for (int i = 0; i < (int)ve.size(); i++)
+	{
+		ve[i] = 10 - i;
+	}
+	print(ve);                         // 10 9 8 7 6
+	sort(ve.begin(), ve.end());  
+	print(ve);                         // 6 7 8 9 10 
+	sort(ve.rbegin(), ve.rend());
+	print(ve);                         // 10 9 8 7 6 
+	ve.erase(ve.begin() + 1);
+	print(ve);                         // 10 8 7 6 
+	ve.insert(ve.begin() + 1, 9);
+	print(ve);                         // 10 9 8 7 6 
+	ve.clear();
+	print(ve);                         //   
+}
